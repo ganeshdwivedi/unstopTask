@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@100..700&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("/fonts/`Poppins-Regular.ttf");
+}
+
+@theme {
+  --color-primary: #6358DC;
+  --color-main-bg: #F4F4F4;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #faeade;
+  color: #523122;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+  display: none;
+}
+
+/* Custom box */
+.custom-checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: #F4F4F4;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+/* Change color when checked */
+.custom-checkbox input:checked+.checkmark {
+  background-color: #6358DC;
+}
+
+/* Add a white tick mark */
+.custom-checkbox input:checked+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
